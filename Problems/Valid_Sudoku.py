@@ -1,7 +1,7 @@
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
 
-        a = []
+        '''a = []
         b = []
         c = []
         txt = []
@@ -10,19 +10,18 @@ class Solution:
         c3 = 0
 
         #Check the rows
-        '''for row in board:
+        for row in board:
             for cell in row:
                 if cell == ".":
                     pass
                 else:
                     a.append(cell)
-            print(a)
             if len(a)!=len(set(a)):
                 bol = False
-            a = []'''
+            a = []
 
         #Check the columns
-        '''for i in range(len(board[0])):
+        for i in range(len(board[0])):
             for row in board:
                 if row[count] == ".":
                     pass
@@ -31,11 +30,18 @@ class Solution:
             count += 1
             if len(b)!=len(set(b)):
                 bol = False
-            b = []'''
+            b = []
 
         #Check the 3x3 squares
-        #for i in range(9):
-        for row in board:
-            
+        for i in range(9):
+            for j in range(3):
+                c.append((board[0])[j])
+                c.append((board[1])[j])
+                c.append((board[2])[j])
+            c = [element for element in c if element != '.']
+            if len(c)!=len(set(c)):
+                bol = False
+            c = []
 
-        return bol
+        
+        return bol'''
